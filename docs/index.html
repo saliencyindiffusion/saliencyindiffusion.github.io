@@ -24,22 +24,36 @@
           </p>
     </font> -->
 </div>
-<div class="content">
+<!-- <div class="content">
   <h2 style="text-align:center;">Abstract</h2>
   <p>We present the first controllable and interpretable saliency prediction approach. This is achieved by incorporating saliency in a diffusion model. Specifically, we leverage a shared latent feature space between the image and saliency modalities to simultaneously generate image edits and predict saliency.
     We utilize a saliency-guided cross-attention mechanism within the shared latent feature space that performs targeted edits on photometric properties such as contrast, brightness, and color. These edits improve saliency within the desired edited image regions, making our model controllable in the context of saliency
     Our approach also allows a qualitative interpretation of the photometric properties on which the model bases its predictions. As shown by a user study, our method is able to predict the human visual attention patterns in the generated image edits. We demonstrate the performance of our approach on several saliency benchmarks.
   </p>
 </div>
+<div class="content"> -->
+
+<div class="content">
+  <h2 style="text-align:center;">Abstract</h2>
+  <p>Saliency is influenced by contrast, brightness, and color as evidenced by cognitive studies on human visual attention.  Our work involves controlled edits to these photometric properties, allowing us to control and interpret the model's saliency prediction in response to such edits.  We focus on photometric edits that enhance the saliency of the most salient region that corresponds to a word from the prompt. We provide two examples for each edit in the following sections. Please use the sliders on the right to see the generated image edits and their saliency maps.
+  </p>
+</div>
 <div class="content">
 
-  <h2>Contrast Editing</h2>
-  <p>Editing image with selected edit method </p>
+
+
+
+
+
+
+  <h2>Contrast</h2>
+  <p>We show the edited images at different intensity levels for on the left and their corresponding saliency predictions on the right. 
+</p>
 
 
      <br>
 
-    <p> Using our method, we can amplify the brightness of ---- in the image below.
+    <p> Using our method, we can amplify the contrast of the object that man is holding in the image below. 
        </p>
     <div class="cat-hat-main">
 
