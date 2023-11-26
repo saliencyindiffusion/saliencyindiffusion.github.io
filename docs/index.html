@@ -11,7 +11,7 @@
 
 <body>
 <div class="content">
-  <h1>Saliency in Diffusion - Interactive Results</h1>
+  <h1>Saliency in Diffusion - Interactive Visualization</h1>
   <p id="authors">Anonymous authors<br>
   <span style="font-size: 16px">CVPR 2024 Submission - Paper ID: 14028
   </span></p>
@@ -35,7 +35,7 @@
 
 <div class="content">
   <h2 style="text-align:center;"></h2>
-  <p>Saliency is influenced by contrast, brightness, and color as evidenced by cognitive studies on human visual attention.  Our work involves controlled edits to these photometric properties, allowing us to control and interpret the model's saliency prediction in response to such edits.  We focus on photometric edits that enhance the saliency of the most salient region that corresponds to a word from the prompt. We provide two examples for each edit in the following sections. Please use the sliders on the right to see the generated image edits and their saliency maps.
+  <p>Saliency is influenced by contrast, brightness, and color as evidenced by cognitive studies on human visual attention. We introduce a novel controllable and interpretable saliency prediction approach that leverages generated edits to these photometric properties. We focus on photometric edits that enhance the saliency of the most salient region that corresponds to a word from the prompt. We provide two examples for each edit in the following sections. Please use the sliders on the right to see the generated image edits and their saliency maps. We refer to the supplementary material for the comparison with the baselines.
   </p>
 </div>
 <div class="content">
@@ -55,7 +55,7 @@
     <div class="cat-hat-main">
 
          <img class="cat-hat-img" id="image0" src="./sal_diff_files/contrast-1/COCO_val2014_000000025860_a1.jpg" width="256" height="256"> <hr><hr><hr><hr>
-         <p>  Image with edited contrast  </p>
+         <p style="text-align:center;">   Image with edited contrast  </p>
          <img class="cat-hat-img" id="image0-sal-map" src="./sal_diff_files/contrast-1/man_a1.png" width="256" height="256">
         <p>  Our predictions  </p>
          <br>
@@ -138,7 +138,7 @@
 </div>
 <div class="content">
 
-  <h2>Color Editing</h2>
+  <h2>Color</h2>
   <p>We show the edited images at different intensity levels for changing the color of the selected region to pink on the left and their corresponding saliency predictions on the right.  </p>
 
     <p> Using our method, we change the color of the toy sitting on the chair in the image below. The attention on the face of the toy increases parallel to the  edited color intensity.
@@ -160,7 +160,7 @@
 </div>
 <div class="content">
 
-  <h2>Color Editing</h2>
+  <h2>Color </h2>
   <p>We show the edited images at different intensity levels for changing the color of the selected region to green on the left and their corresponding saliency predictions on the right.  </p>
 
     <p> We change the color of traffic lights to green in the image below. Observe that, the saliency disperses towards the edited region. 
