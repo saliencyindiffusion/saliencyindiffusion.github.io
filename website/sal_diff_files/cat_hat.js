@@ -107,49 +107,49 @@ function init() {
     slider0.oninput = function() {
         // 248, 128, 0
         image0.src = "./sal_diff_files/contrast-1/COCO_val2014_000000025860_a" + String(slider0.value) + ".jpg";
-        image0_sal.src = "./sal_diff_files/contrast-1/COCO_val2014_000000025860_a" + String(slider0.value) + ".jpg";
+        image0_sal.src = "./sal_diff_files/contrast-1/man_a" + String(slider0.value) + ".png";
     //  set_alpha(slider, fluffy)
     }
 
     slider1.oninput = function() {
         // 248, 128, 0
         image1.src = "./sal_diff_files/contrast-2/COCO_val2014_000000061735_a" + String(slider1.value) + ".jpg";
-        image1_sal.src = "./sal_diff_files/contrast-2/COCO_val2014_000000061735_a" + String(slider1.value) + ".jpg";
+        image1_sal.src = "./sal_diff_files/contrast-2/dog_a" + String(slider1.value) + ".png";
     //  set_alpha(slider, fluffy)
     }
 
     slider2.oninput = function() {
         // 248, 128, 0
         image2.src = "./sal_diff_files/brightness-1/COCO_val2014_000000028273_a" + String(slider2.value) + ".jpg";
-        image2_sal.src = "./sal_diff_files/brightness-1/COCO_val2014_000000028273_a" + String(slider2.value) + ".jpg";
+        image2_sal.src = "./sal_diff_files/brightness-1/cat_a" + String(slider2.value) + ".png";
     //  set_alpha(slider, fluffy)
     }
 
     slider3.oninput = function() {
         // 248, 128, 0
         image3.src = "./sal_diff_files/brightness-2/COCO_val2014_000000251920_a" + String(slider3.value) + ".jpg";
-        image3_sal.src = "./sal_diff_files/brightness-2/COCO_val2014_000000251920_a" + String(slider3.value) + ".jpg";
+        image3_sal.src = "./sal_diff_files/brightness-2/pizza_a" + String(slider3.value) + ".png";
     //  set_alpha(slider, fluffy)
     }
 
     slider4.oninput = function() {
         // 248, 128, 0
         image4.src = "./sal_diff_files/color-1/COCO_val2014_000000432125_a" + String(slider4.value) + ".jpg";
-        image4_sal.src = "./sal_diff_files/color-1/COCO_val2014_000000432125_a" + String(slider4.value) + ".jpg";
+        image4_sal.src = "./sal_diff_files/color-1/pink_a" + String(slider4.value) + ".png";
     //  set_alpha(slider, fluffy)
     }
 
     slider5.oninput = function() {
         // 248, 128, 0
         image5.src = "./sal_diff_files/color-2/COCO_val2014_000000289222_a" + String(slider5.value) + ".jpg";
-        image5_sal.src = "./sal_diff_files/color-2/COCO_val2014_000000289222_a" + String(slider5.value) + ".jpg";
+        image5_sal.src = "./sal_diff_files/color-2/tr_a" + String(slider5.value) + ".png";
     //  set_alpha(slider, fluffy)
     }
 
     slider6.oninput = function() {
         // 248, 128, 0
         image6.src = "./sal_diff_files/hamburger/COCO_val2014_000000100083_a" + String(slider6.value) + ".jpg";
-        image6_sal.src = "./sal_diff_files/hamburger/COCO_val2014_000000100083_sal_a" + String(slider6.value) + ".jpg";
+        image6_sal.src = "./sal_diff_files/hamburger/burger_a" + String(slider6.value) + ".png";
     //  set_alpha(slider, fluffy)
     }
 
