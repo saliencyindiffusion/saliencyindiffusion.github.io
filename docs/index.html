@@ -13,7 +13,7 @@
 <div class="content">
   <h1>Saliency in Diffusion - Interactive Visualization</h1>
   <p id="authors">Anonymous authors<br>
-  <span style="font-size: 16px">CVPR 2024 Submission - Paper ID: 14028
+  <span style="font-size: 18px">CVPR 2024 Submission - Paper ID: 14028
   </span></p>
   <!-- <br>
   <img src="./ptp_files/teaser.png" class="teaser-gif" style="width:100%;"><br>
@@ -35,7 +35,7 @@
 
 <div class="content">
   <h2 style="text-align:center;"></h2>
-  <p>Saliency is influenced by contrast, brightness, and color as evidenced by cognitive studies on human visual attention. We introduce a novel controllable and interpretable saliency prediction approach that leverages generated edits to these photometric properties. We focus on photometric edits that enhance the saliency of the most salient region that corresponds to a word from the prompt. We provide two examples for each edit in the following sections. Please use the sliders on the right to see the generated image edits and their saliency maps. We refer to the supplementary material for the comparison with the baselines.
+  <p>Saliency is influenced by contrast<sup><a href="#ref3">[3]</a></sup>, brightness<sup><a href="#ref2">[2]</a></sup>, and color<sup><a href="#ref4">[4]</a></sup><sup><a href="#ref5">[5]</a></sup> as evidenced by cognitive studies on human visual attention<sup><a href="#ref1">[1]</a></sup>. We introduce a novel controllable and interpretable saliency prediction approach that leverages generated edits to these photometric properties. We focus on photometric edits that enhance the saliency of the most salient region that corresponds to a word from the prompt. We provide two examples for each edit in the following sections. Please use the sliders on the right to see the generated image edits and their saliency maps. We refer to the supplementary material for the comparison with the baselines.
   </p>
 </div>
 <div class="content">
@@ -50,14 +50,19 @@
   <p>We show the edited images at different intensity levels for enhancing contrast on the left and their corresponding saliency predictions on the right. 
 </p>
 
-    <p> Using our method, we amplify the contrast of the object that man is holding in the image below. Observe the shift in saliency towards the region with high contrast. Our model is able to enhance saliency on the edited region.
+    <p> Using our method, we amplify the contrast of the object that man is holding in the image below. Observe the shift in saliency towards the region with high contrast. Our model is able to enhance and thus, control the saliency of the edited region.
        </p>
     <div class="cat-hat-main">
 
-         <img class="cat-hat-img" id="image0" src="./sal_diff_files/contrast-1/COCO_val2014_000000025860_a1.jpg" width="256" height="256"> <hr><hr><hr><hr>
-         <p style="text-align:center;">   Image with edited contrast  </p>
-         <img class="cat-hat-img" id="image0-sal-map" src="./sal_diff_files/contrast-1/man_a1.png" width="256" height="256">
-        <p>  Our predictions  </p>
+        <div class="mybox">
+         <img class="cat-hat-img" id="image0" src="./sal_diff_files/contrast-1/COCO_val2014_000000025860_a1.jpg" style="width:256px;height:256px;"><br>
+         <p style="text-align:center;">   Image with edited contrast </p>
+        </div>
+        <hr><hr><hr><hr>
+        <div class="mybox">
+         <img class="cat-hat-img" id="image0-sal-map" src="./sal_diff_files/contrast-1/man_a1.png" style="width:256px;height:256px;">
+         <p style="text-align:center;">  Our predictions  </p>
+      </div>
          <br>
          <div class="cat-hat-text">
              <!-- <span style="display: block; text-align: center">"My <span id ="fluffy" style="background-color: #f88000;">fluffy</span> bunny doll." </span><br> -->
@@ -73,12 +78,19 @@
 
   <h2>Contrast </h2>
   <p>We show the edited images at different intensity levels for enhancing contrast on the left and their corresponding saliency predictions on the right.  </p>
-    <p> Using our method, we can amplify the contrast of the dog in the image below. Although the items on the desk remain salient, the dog gathers more attention as the edit intensity increases.
+    <p> Using our method, we can amplify the contrast of the dog in the image below. Although the items on the desk remain salient, the dog gathers more attention as the edit intensity increases. Our model is able to control the saliency prediction over the edited region.
        </p>
     <div class="cat-hat-main">
 
-        <img class="cat-hat-img" id="image1" src="./sal_diff_files/contrast-2/COCO_val2014_000000061735_a1.jpg" width="256" height="256"><hr><hr><hr><hr>
-    <img class="cat-hat-img" id="image1-sal-map" src="./sal_diff_files/contrast-2/dog_a1.png" width="256" height="256">
+      <div class="mybox">
+        <img class="cat-hat-img" id="image1" src="./sal_diff_files/contrast-2/COCO_val2014_000000061735_a1.jpg" style="width:256px;height:256px;">
+        <p style="text-align:center;">   Image with edited contrast </p>
+      </div>
+      <hr><hr><hr><hr>
+      <div class="mybox">
+      <img class="cat-hat-img" id="image1-sal-map" src="./sal_diff_files/contrast-2/dog_a1.png" style="width:256px;height:256px;">
+      <p style="text-align:center;">   Our predictions </p>
+      </div>
     
          <br>
          <div class="cat-hat-text">
@@ -96,12 +108,18 @@
   <h2>Brightness </h2>
   <p>We show the edited images at different intensity levels for enhancing brightness on the left and their corresponding saliency predictions on the right.  </p>
 
-    <p> We enhance the brightness of the cat in the image below. Note that, the attention shifts towards the brighter regions which aligns with our edited regions.
+    <p> We enhance the brightness of the cat in the image below. Note that, the attention shifts towards the brighter regions which aligns with our edited regions. Our model is able to predict the saliency in a controllable and interpretable manner by following the brightness change towards the rear end of the cat.
        </p>
     <div class="cat-hat-main">
-
-         <img class="cat-hat-img" id="image2" src="./sal_diff_files/brightness-1/COCO_val2014_000000028273_a1.jpg" width="256" height="256">
-        <img class="cat-hat-img" id="image2-sal-map" src="./sal_diff_files/brightness-1/cat_a1.png" width="256" height="256">
+      <div class="mybox">
+         <img class="cat-hat-img" id="image2" src="./sal_diff_files/brightness-1/COCO_val2014_000000028273_a1.jpg" style="width:256px;height:256px;">
+         <p style="text-align:center;">   Image with edited brightness </p>
+        </div>
+        <hr><hr><hr><hr>
+        <div class="mybox">
+        <img class="cat-hat-img" id="image2-sal-map" src="./sal_diff_files/brightness-1/cat_a1.png" style="width:256px;height:256px;">
+        <p style="text-align:center;">   Our predictions </p>
+      </div>
        <br>
          <div class="cat-hat-text">
              <!-- <span style="display: block; text-align: center">"My <span id ="fluffy" style="background-color: #f88000;">fluffy</span> bunny doll." </span><br> -->
@@ -123,8 +141,15 @@
        </p>
     <div class="cat-hat-main">
 
-         <img class="cat-hat-img" id="image3" src="./sal_diff_files/brightness-2/COCO_val2014_000000251920_a1.jpg" width="256" height="256"> <hr><hr><hr><hr>
-         <img class="cat-hat-img" id="image3-sal-map" src="./sal_diff_files/brightness-2/pizza_a1.png" width="256" height="256">
+      <div class="mybox">
+         <img class="cat-hat-img" id="image3" src="./sal_diff_files/brightness-2/COCO_val2014_000000251920_a1.jpg" style="width:256px;height:256px;"> 
+         <p style="text-align:center;">   Image with edited brightness </p>
+         </div>
+         <hr><hr><hr><hr>
+         <div class="mybox">
+         <img class="cat-hat-img" id="image3-sal-map" src="./sal_diff_files/brightness-2/pizza_a1.png" style="width:256px;height:256px;">
+         <p style="text-align:center;">   Our predictions </p>
+        </div>
          <br>
          <div class="cat-hat-text">
              <!-- <span style="display: block; text-align: center">"My <span id ="fluffy" style="background-color: #f88000;">fluffy</span> bunny doll." </span><br> -->
@@ -141,12 +166,19 @@
   <h2>Color</h2>
   <p>We show the edited images at different intensity levels for changing the color of the selected region to pink on the left and their corresponding saliency predictions on the right.  </p>
 
-    <p> Using our method, we change the color of the toy sitting on the chair in the image below. The attention on the face of the toy increases parallel to the  edited color intensity.
+    <p> Using our method, we change the color of the toy sitting on the chair in the image below. The attention on the face of the toy increases according to the intensity of the color edit.
        </p>
     <div class="cat-hat-main">
 
-         <img class="cat-hat-img" id="image4" src="./sal_diff_files/color-1/COCO_val2014_000000432125_a1.jpg" width="256" height="256"> <hr><hr><hr><hr>
-         <img class="cat-hat-img" id="image4-sal-map" src="./sal_diff_files/color-1/pink_a1.png" width="256" height="256">
+      <div class="mybox">
+         <img class="cat-hat-img" id="image4" src="./sal_diff_files/color-1/COCO_val2014_000000432125_a1.jpg" style="width:256px;height:256px;"> 
+         <p style="text-align:center;">   Image with edited color </p>
+      </div>
+      <hr><hr><hr><hr>
+      <div class="mybox">
+         <img class="cat-hat-img" id="image4-sal-map" src="./sal_diff_files/color-1/pink_a1.png" style="width:256px;height:256px;">
+         <p style="text-align:center;">   Our predictions </p>
+      </div>
          <br>
          <div class="cat-hat-text">
              <!-- <span style="display: block; text-align: center">"My <span id ="fluffy" style="background-color: #f88000;">fluffy</span> bunny doll." </span><br> -->
@@ -163,12 +195,20 @@
   <h2>Color </h2>
   <p>We show the edited images at different intensity levels for changing the color of the selected region to green on the left and their corresponding saliency predictions on the right.  </p>
 
-    <p> We change the color of traffic lights to green in the image below. Observe that, the saliency disperses towards the edited region. 
+    <p> Here, we change the color of traffic light to green in the image below. Observe that, the saliency disperses towards the edited region. As the color intensifies, our odel is able to enhance the saliency prediction within these color-edited regions.
+
        </p>
     <div class="cat-hat-main">
 
-         <img class="cat-hat-img" id="image5" src="./sal_diff_files/color-2/COCO_val2014_000000289222_a1.jpg" width="256" height="256"> <hr><hr><hr><hr>
-         <img class="cat-hat-img" id="image5-sal-map" src="./sal_diff_files/color-2/tr_a1.png" width="256" height="256">
+      <div class="mybox">
+         <img class="cat-hat-img" id="image5" src="./sal_diff_files/color-2/COCO_val2014_000000289222_a1.jpg" style="width:256px;height:256px;"> 
+         <p style="text-align:center;">   Image with edited color </p>
+      </div>
+      <hr><hr><hr><hr>
+      <div class="mybox">
+         <img class="cat-hat-img" id="image5-sal-map" src="./sal_diff_files/color-2/tr_a1.png" style="width:256px;height:256px;">
+         <p style="text-align:center;">   Our predictions </p>
+        </div>
          <br>
          <div class="cat-hat-text">
              <!-- <span style="display: block; text-align: center">"My <span id ="fluffy" style="background-color: #f88000;">fluffy</span> bunny doll." </span><br> -->
@@ -183,17 +223,22 @@
 <div class="content">
 
   <h2>Applications of our method</h2>
-  <p>We show the edited images at different intensity levels for enhancing contrast of the selected region to green on the left and their corresponding saliency predictions on the right.  </p>
+  <p>We show the edited images at different intensity levels for enhancing contrast of the selected region on the left and their corresponding saliency predictions on the right.  </p>
 
 
-     <br>
-
-    <p> We show a practical application of our model in the field of advertising, particularly in enhancing the visual appeal of products. Consider an advertisement featuring a hamburger alongside fries. Using our model, we can selectively increase the contrast on the hamburger, drawing more attention to the edited region. Assessing the saliency of such generated image edits in capturing viewer attention would require user studies which are costly and time-consuming. However, our method simultaneously produces the saliency map as we generate the image edit. This immediate feedback allows advertisers to fine-tune their image edits in real time, ensuring that the focal product, like the hamburger in this scenario, stands out from other elements, such as the fries. Hence, we enable advertisers to make data-driven decisions about visual edits, optimizing the impact of their advertisements without the need for time-consuming user studies. This not only streamlines the process of creating visually compelling advertisements but also enhances the likelihood of capturing and retaining consumer attention.
+    <p> We show a practical application of our model in the field of advertising, particularly in enhancing the visual appeal of products in the image below. Consider an advertisement featuring a hamburger alongside fries. Using our model, we can selectively increase the contrast on the hamburger, drawing more attention to the edited region. Assessing the saliency of such generated image edits in capturing viewer visual attention would require user studies which are costly and time-consuming. However, our method simultaneously produces the saliency map as we generate the image edit. This immediate feedback allows advertisers to fine-tune their image edits in real-time, ensuring that the focal product, like the hamburger in this scenario, stands out from other elements, such as the fries. Hence, we enable advertisers to make human visual attention-driven decisions about visual edits, optimizing the impact of their advertisements without the need for time-consuming user studies. This not only streamlines the process of creating visually compelling advertisements but also enhances the likelihood of capturing and retaining consumer attention.
        </p>
     <div class="cat-hat-main">
 
-         <img class="cat-hat-img" id="image6" src="./sal_diff_files/hamburger/COCO_val2014_000000100083_a1.jpg" width="256" height="256"> <hr><hr><hr><hr>
-         <img class="cat-hat-img" id="image6-sal-map" src="./sal_diff_files/hamburger/burger_a1.png" width="256" height="256">
+      <div class="mybox">
+         <img class="cat-hat-img" id="image6" src="./sal_diff_files/hamburger/COCO_val2014_000000100083_a1.jpg" style="width:256px;height:256px;"> 
+         <p style="text-align:center;">   Image with edited contrast </p>
+         </div>
+        <hr><hr><hr><hr>
+      <div class="mybox">
+         <img class="cat-hat-img" id="image6-sal-map" src="./sal_diff_files/hamburger/burger_a1.png" style="width:256px;height:256px;">
+         <p style="text-align:center;">   Our predictions </p>
+      </div>
          <br>
          <div class="cat-hat-text">
              <!-- <span style="display: block; text-align: center">"My <span id ="fluffy" style="background-color: #f88000;">fluffy</span> bunny doll." </span><br> -->
@@ -204,6 +249,33 @@
             </div>
     </div>
   <br>
+
+
+
+
+
+</div>
+
+
+
+<div class="content">
+
+
+<!-- References Section -->
+<div id="references">
+    <h2>References</h2>
+    <ol>
+        <!-- Add more list items for each reference -->
+        <li id="ref1">Wolfe, J., Horowitz, T., What attributes guide the deployment of visual attention and how do they do it?, <i>Nature Reviews Neuroscience</i>, 5, 2004. </li>
+        <li id="ref2">Ochiai, N., & Sato, M. , Effects of Surrounding Brightness on Visual Search for Safety Colors. <i>Color Research and Application</i>, 30(6), 2005. </li>
+
+        <li id="ref3">Pashler, H., Dobkins, K. & Huang L., Is contrast just another feature for visual selective attention?, <i>Vision Research</i>, 44(12), 2004.</li>
+        <li id="ref4">Nagy, A. L. & Sanchez, R. R.  Critical color differences determined with a visual search task, <i>Journal of the Optical Society of America</i>, 1990.</li>
+        <li id="ref5">Bauer, B., Jolicoeur, P. & Cowan, W. B.  Visual search for colour targets that are or are not linearly-separable from distractors. <i>Vision Research</i>, 1996.</li>
+
+    </ol>
+</div>
+
 </div>
 
 </div>
